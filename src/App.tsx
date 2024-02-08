@@ -21,7 +21,7 @@ function App() {
   }, [count])
 
   return (
-    <AppContextProvider>
+    <>
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -45,7 +45,8 @@ function App() {
       </p>
       <Test />
 
-    </AppContextProvider>
+    
+    </>
   )
 }
 

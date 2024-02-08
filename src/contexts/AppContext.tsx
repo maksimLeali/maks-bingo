@@ -10,7 +10,7 @@ export type IAppContext = {
 const defaultValue: IAppContext = {
     webpSupported: true,
     setTheme: () => {},
-    pippo: ()=>{}
+    pippo: ()=>{ }
 }
 
 
