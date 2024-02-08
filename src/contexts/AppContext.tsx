@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useMemo, useState } from 'react'
+import React, { useContext, useMemo, useState } from 'react'
 import { ThemeProvider } from 'styled-components'
 export type IAppContext = {
     webpSupported: boolean,
@@ -26,7 +26,7 @@ export const AppContextProvider: React.FC<Props & Record<string, unknown>> = ({ 
     const webpSupported = document.createElement('canvas').toDataURL('image/webp').indexOf('data:image/webp') == 0;
 
     const setTheme = ( theme:  'dark' | 'light') =>{
-        console.log('*****')
+        
         setColorTheme(theme)
     }
 

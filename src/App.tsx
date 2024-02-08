@@ -1,14 +1,15 @@
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import styled from 'styled-components'
-import { AppContextProvider, useAppContext } from './contexts'
+import { useAppContext } from './contexts'
+import { Test } from './componenst/test'
 
 
-function App() {
+export const App = React.memo(()=> {
   const [count, setCount] = useState(0)
-  console.log(import.meta.env.VITE_API_URL)
+  
   const { setTheme } = useAppContext();
   setTheme('light')
   useEffect(() => {
@@ -43,18 +44,11 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-      <Test />
+      
+      <Test/>
 
     
     </>
   )
-}
+})
 
-export default App
-
-const Test = styled.div`
-  @import url('./styles/_vars.scss');
-  width: 100px;
-  height: 100px;
-  background-color: ${({ theme }) => theme.colors.green};
-`
