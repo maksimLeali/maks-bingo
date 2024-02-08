@@ -3,14 +3,12 @@ import { ThemeProvider } from 'styled-components'
 export type IAppContext = {
     webpSupported: boolean,
     setTheme: (theme: 'light' | 'dark') => void
-    pippo: ()=> void
 }
 
 
 const defaultValue: IAppContext = {
     webpSupported: true,
     setTheme: () => {},
-    pippo: ()=>{ }
 }
 
 
@@ -32,43 +30,28 @@ export const AppContextProvider: React.FC<Props & Record<string, unknown>> = ({ 
         setColorTheme(theme)
     }
 
-    const pippo = ()=> {
-        console.log('****************}')
-    }
-    
-    const colorTheme = useMemo(() => {
-        if (theme === 'light') {
-            return {
-                black: "#0C120CFF",
-                white: "#FFFBFCFF",
-                green: "#0E8140",
-                red: "#C20114FF",
-                purple: "#9A879DFF"
-            };
-        }
-        return {
-            black: "#0C120CFF",
-            white: "#FFFBFCFF",
-            green: "#31E981FF",
-            red: "#C20114FF",
-            purple: "#9A879DFF"
-        };
-    }, [theme]);
 
     const mainTheme =useMemo(()=> {
         return {
-            colors: colorTheme,
+            colors: theme === 'light' ? {
+                                            black: "#0C120CFF",
+                                            white: "#FFFBFCFF",
+                                            green: "#0E8140",
+                                            red: "#C20114FF",
+                                            purple: "#9A879DFF"
+                                        }
+                        : {
+                            black: "#FFFBFCFF",
+                            white: "#0C120CFF",
+                            green: "#31E981FF",
+                            red: "#C20114FF",
+                            purple: "#9A879DFF"
+                        },
             uw: (val: number) => `calc(1vw * 100 / 32 * #{${val}})`
         }
     }, [theme])
 
-    useEffect(()=> {
-        console.log('theme -> ', theme)
-    }, [theme])
-
-
-
-    const value = useMemo(() => ({ ...defaultValue, webpSupported, setTheme, pippo }), [])
+    const value = useMemo(() => ({ ...defaultValue, webpSupported, setTheme }), [])
 
     return <AppContext.Provider value={value}>
         <ThemeProvider theme={mainTheme}>

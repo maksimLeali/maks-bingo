@@ -9,7 +9,7 @@ import { AppContextProvider, useAppContext } from './contexts'
 function App() {
   const [count, setCount] = useState(0)
   console.log(import.meta.env.VITE_API_URL)
-  const { setTheme, pippo } = useAppContext();
+  const { setTheme } = useAppContext();
   setTheme('light')
   useEffect(() => {
     console.log(count % 2 , count % 2 == 0  ? 'light' : 'dark')
@@ -32,8 +32,8 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        {/* <button onClick={() => setCount((count) => count + 1)}> */}
-        <button onClick={() => { console.log('pippo'); pippo()}}>
+        <button onClick={() => setCount((count) => count + 1)}>
+        
           count is {count}
         </button>
         <p>
