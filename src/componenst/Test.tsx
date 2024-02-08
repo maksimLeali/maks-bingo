@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 
 
-export const Test = React.memo(() => {
+export const Test: React.FC<{}> = React.memo(() => {
     console.log(import.meta.env.VITE_API_URL)
 
 

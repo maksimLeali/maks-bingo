@@ -47,7 +47,7 @@ export const AppContextProvider: React.FC<Props & Record<string, unknown>> = ({ 
                             red: "#C20114FF",
                             purple: "#9A879DFF"
                         },
-            uw: (val: number) => `calc(1vw * 100 / 32 * #{${val}})`
+            uw: (val: number) => `calc(1vw * 100 / 32 * ${val})`
         }
     }, [theme])
 
