@@ -1,16 +1,15 @@
 import React, { useContext, useMemo, useState } from 'react'
 import { ThemeProvider } from 'styled-components'
+import { colorThemes } from '../utils'
 export type IAppContext = {
     webpSupported: boolean,
     setTheme: (theme: 'light' | 'dark') => void
 }
 
-
 const defaultValue: IAppContext = {
     webpSupported: true,
     setTheme: () => {},
 }
-
 
 const AppContext = React.createContext<IAppContext>(defaultValue)
 
@@ -18,11 +17,8 @@ type Props = {
     children: React.ReactNode,
 }
 
-
-
-
 export const AppContextProvider: React.FC<Props & Record<string, unknown>> = ({ children }) => {
-    const [theme, setColorTheme] = useState('dark')
+    const [theme, setColorTheme] = useState<'dark' | 'light'>('dark')
     const webpSupported = document.createElement('canvas').toDataURL('image/webp').indexOf('data:image/webp') == 0;
 
     const setTheme = ( theme:  'dark' | 'light') =>{
@@ -33,20 +29,7 @@ export const AppContextProvider: React.FC<Props & Record<string, unknown>> = ({ 
 
     const mainTheme =useMemo(()=> {
         return {
-            colors: theme === 'light' ? {
-                                            black: "#0C120CFF",
-                                            white: "#FFFBFCFF",
-                                            green: "#0E8140",
-                                            red: "#C20114FF",
-                                            purple: "#9A879DFF"
-                                        }
-                        : {
-                            black: "#FFFBFCFF",
-                            white: "#0C120CFF",
-                            green: "#31E981FF",
-                            red: "#C20114FF",
-                            purple: "#9A879DFF"
-                        },
+            colors: colorThemes[theme],
             uw: (val: number) => `calc(1vw * 100 / 32 * ${val})`
         }
     }, [theme])

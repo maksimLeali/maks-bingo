@@ -1,0 +1,1 @@
+export { colorThemes } from './theme'
