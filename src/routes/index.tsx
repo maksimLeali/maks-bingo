@@ -3,7 +3,7 @@ import {
 	Route,
 	Routes as Switch,
 } from "react-router-dom";
-import { Intro } from "../modules/game";
+import { Intro, Main } from "../modules/game";
 
 export const AppRouter = () => {
 	return (
@@ -11,6 +11,7 @@ export const AppRouter = () => {
 			<Switch>
 				{/* Public Routes */}
 				<Route path="/" Component={() => <Intro />} />
+				<Route path="/main" Component={() => <Main/>} />
 				
 			</Switch>
 		</Router>

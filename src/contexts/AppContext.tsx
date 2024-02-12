@@ -22,10 +22,8 @@ export const AppContextProvider: React.FC<Props & Record<string, unknown>> = ({ 
     const webpSupported = document.createElement('canvas').toDataURL('image/webp').indexOf('data:image/webp') == 0;
 
     const setTheme = ( theme:  'dark' | 'light') =>{
-        
-        setColorTheme(theme)
+                setColorTheme(theme)
     }
-
 
     const mainTheme =useMemo(()=> {
         return {
