@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Div } from "../../../components";
-import { uw,themeColor } from "../../../utils/themeFunctions";
+import { uw,themeColor } from "../../../utils";
 
 
 
