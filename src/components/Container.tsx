@@ -5,7 +5,7 @@ type props = {
 }
 
 export const Div = styled.div<props>`
-    width: ${({uw, theme})=> theme.uw(uw)};
+    ${({uw, theme})=> uw? `width :${theme.uw(uw)};` : ''}
     box-sizing: border-box;
 `
 
