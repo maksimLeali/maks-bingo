@@ -1,6 +1,6 @@
 import React, { useCallback, useContext, useMemo, useState } from 'react'
 import { ThemeProvider } from 'styled-components'
-import { colorThemes } from '../utils'
+import { colorThemes, commonColorThemes } from '../utils'
 export type IAppContext = {
     webpSupported: boolean,
     switchMode:() => void
@@ -35,7 +35,7 @@ export const AppContextProvider: React.FC<Props & Record<string, unknown>> = ({ 
 
     const mainTheme = useMemo(() => {
         return {
-            colors: colorThemes[themeMode],
+            colors: {...colorThemes[themeMode], ...commonColorThemes},
             uw: (val: number) => `calc(1vw * 100 / 32 * ${val})`
         }
     }, [themeMode])

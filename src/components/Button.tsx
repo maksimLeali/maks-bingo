@@ -14,11 +14,11 @@ export const Button: React.FC<props> = React.memo(({ onCLick, label }) => {
     </Container>
 })
 
-const Container = styled.button`
+const Container = styled.span`
     border-radius: 6px;
     box-sizing: border-box;
     background-color: ${$color('black')};
-    padding: ${$padding(.5, 2)};
+    padding: ${$padding(.5, 1.2)};
     color: ${$color('white')};
     &:hover{
         cursor: pointer;
