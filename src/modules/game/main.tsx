@@ -7,10 +7,10 @@ import { $padding } from "../../utils"
 
 export const Main = React.memo(() => {
 
-    const { setTheme } = useAppContext()
+    const { switchMode } = useAppContext()
     return <Container>
         <MainBoard />
-        <Button label="Light mode" onCLick={() => setTheme('light')} />
+        <Button label="Light mode" onCLick={()=>switchMode()} />
     </Container>
 })
 
