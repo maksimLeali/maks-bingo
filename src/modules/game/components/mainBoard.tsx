@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { Div } from "../../../components";
+import { uw,themeColor } from "../../../utils/themeFunctions";
+
 
 
 export const MainBoard = React.memo(() => {
@@ -8,9 +10,12 @@ export const MainBoard = React.memo(() => {
     </Container>
 })
 
+
+
+
 const Container = styled(Div)`
     width : 100%;
-    height: 100px;
-    border-left: 1px solid ${({ theme: { colors } }) => colors.black};
-    border-bottom: 1px solid ${({ theme: { colors } }) => colors.black};
+    height: ${uw(10)};
+    border-left: 1px solid ${themeColor('black')};
+    border-bottom: 1px solid ${themeColor('black')};
 `
