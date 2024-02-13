@@ -3,17 +3,17 @@ import { Button, Div } from "../../components"
 import React from "react"
 import { MainBoard } from "./components"
 import { useAppContext } from "../../contexts"
-import { padding } from "../../utils"
+import { $padding } from "../../utils"
 
-export const Main = React.memo(()=>{
+export const Main = React.memo(() => {
 
-    const {setTheme} = useAppContext()
+    const { setTheme } = useAppContext()
     return <Container>
         <MainBoard />
-        <Button label="Light mode" onCLick={()=>setTheme('light')} />
+        <Button label="Light mode" onCLick={() => setTheme('light')} />
     </Container>
 })
 
 const Container = styled(Div)`
-    padding: ${padding(0, 1)};
+    padding: ${$padding(0, 1)};
 `

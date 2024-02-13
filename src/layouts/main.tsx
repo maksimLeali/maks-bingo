@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Div } from "../components";
-import { config, themeColor } from "../utils";
+import { config, $color } from "../utils";
 
 export const MainLayout: React.FC<{ children: React.ReactElement }> = React.memo(({ children }) => {
 
@@ -16,5 +16,5 @@ export const MainLayout: React.FC<{ children: React.ReactElement }> = React.memo
 const Container = styled(Div)`
     width: 100%;
     min-height: 100%;
-    background-color: ${themeColor('white')};
+    background-color: ${$color('white')};
 `

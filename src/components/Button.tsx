@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import {padding, themeColor } from "../utils";
+import { $padding, $color } from "../utils";
 
 type props = {
-    onCLick: ()=>void
+    onCLick: () => void
     label: string
 }
 
-export const Button: React.FC<props> = React.memo(({onCLick, label})=>{
+export const Button: React.FC<props> = React.memo(({ onCLick, label }) => {
 
     return <Container onClick={onCLick}>
         {label}
@@ -17,9 +17,9 @@ export const Button: React.FC<props> = React.memo(({onCLick, label})=>{
 const Container = styled.button`
     border-radius: 6px;
     box-sizing: border-box;
-    background-color: ${themeColor('black') };
-    padding: ${padding(.5,2)};
-    color: ${themeColor('white') };
+    background-color: ${$color('black')};
+    padding: ${$padding(.5, 2)};
+    color: ${$color('white')};
     &:hover{
         cursor: pointer;
     }
