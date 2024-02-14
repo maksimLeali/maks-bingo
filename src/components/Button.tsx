@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { $padding, $color } from "../utils";
+import { $cssTRBL, $color } from "../utils";
 
 type props = {
     onCLick: () => void
@@ -18,7 +18,7 @@ const Container = styled.span`
     border-radius: 6px;
     box-sizing: border-box;
     background-color: ${$color('black')};
-    padding: ${$padding(.5, 1.2)};
+    padding: ${$cssTRBL(.5, 1.2)};
     color: ${$color('white')};
     &:hover{
         cursor: pointer;
