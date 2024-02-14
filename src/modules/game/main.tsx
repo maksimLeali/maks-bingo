@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { Button, Div } from "../../components"
+import { Button } from "../../components"
 import React from "react"
 import { MainBoard } from "./components"
 import { useAppContext } from "../../contexts"
@@ -14,6 +14,9 @@ export const Main = React.memo(() => {
     </Container>
 })
 
-const Container = styled(Div)`
+const Container = styled.div`
     padding: ${$padding(0, 1)};
+    display:flex;
+    align-items: center;
+    flex-direction:column;
 `

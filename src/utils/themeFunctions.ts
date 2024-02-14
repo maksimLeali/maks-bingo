@@ -1,9 +1,11 @@
 
-type Theme =  {[key: string]: any} 
+type Theme = { [key: string]: any }
 
-export const $uw = (uw: number) => ({ theme }: { theme: Theme }) => theme.uw(uw);
+export const $uw = (val: number) => ({ }) => `calc(1vw * 100 / 48 * ${val})`;
 export const $color = (color: string) => ({ theme }: { theme: Theme }) => theme.colors[color]
+export const $padding = (top: number, right: number = top, bottom: number = top, left: number = right) => `${$uw(top)} ${$uw(right)} ${$uw(bottom)} ${$uw(left)}`
+export const $break_point = (val: number) => `@media only screen and (max-width: ${val}px)`;
 
-export const $padding = (top: number, right: number = top, bottom: number = top, left: number = right) => {
-    return ({ theme }: { theme: Theme }) => `${theme.uw(top)} ${theme.uw(right)} ${theme.uw(bottom)} ${theme.uw(left)}`
-}
+
+// uw: (val: number) => ,
+// break_point: (val: number)=> `@media only screen and (max-width: ${val}px)`

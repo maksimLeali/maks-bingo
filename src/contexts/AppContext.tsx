@@ -36,7 +36,6 @@ export const AppContextProvider: React.FC<Props & Record<string, unknown>> = ({ 
     const mainTheme = useMemo(() => {
         return {
             colors: {...colorThemes[themeMode], ...commonColorThemes},
-            uw: (val: number) => `calc(1vw * 100 / 32 * ${val})`
         }
     }, [themeMode])
 

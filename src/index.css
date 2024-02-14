@@ -24,7 +24,7 @@ body {
   width: 100%;
 }
 .debug {
-  background-size: calc(1vw * 100 / 32) calc(1vw * 100 / 32 );
+  background-size: calc(1vw * 100 / 48) calc(1vw * 100 / 48 );
   background-image:
     linear-gradient(to right, #8883 1px, transparent 1px),
     linear-gradient(to bottom, #8883 1px, transparent 1px);

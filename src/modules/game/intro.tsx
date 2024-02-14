@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Div } from "../../components";
+import { Button } from "../../components";
 import styled from "styled-components";
 
 export const Intro = React.memo(()=>{
@@ -8,6 +8,6 @@ export const Intro = React.memo(()=>{
     </Container>
 })
 
-const Container = styled(Div)`
+const Container = styled.div`
     
 `
