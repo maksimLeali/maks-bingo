@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { $color, $uw } from "../../../utils";
+import { $color} from "../../../utils";
 
 export const Tile = React.memo(()=>{
 
@@ -9,8 +9,7 @@ export const Tile = React.memo(()=>{
     </Container>
 })
 
-const Container = styled.div`
-    
+const Container = styled.div`    
     box-sizing: border-box;
     border-right: 1px solid ${$color('black')};
     border-top: 1px solid ${$color('black')};
