@@ -1,3 +1,4 @@
+export * from './functions'
 export const colorThemes= {
     light: {
         black: "#0c0d12",
