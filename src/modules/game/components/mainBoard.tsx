@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { $uw, $color, $break_point } from "../../../utils";
 import { Tile } from "./Tile";
 import { quotes } from "../../../utils/quotes";
-
+import _ from 'lodash'
 
 export const MainBoard = React.memo(() => {
     return <Container >

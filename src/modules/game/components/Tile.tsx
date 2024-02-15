@@ -15,21 +15,21 @@ export const Tile: React.FC<{ text: string }> = React.memo(({ text }) => {
 
         const sample = containerRef.current.clientHeight / spanRef.current.clientHeight;
         console.log(containerRef.current.clientHeight, spanRef.current.clientHeight, sample);
-        if (sample > 1.5) {
-            setFontMult((prev) => prev + 0.03);
+        if (sample > 1.6) {
+            setFontMult((prev) => prev + 0.07);
         } else if (sample <= 1 ) {
-            setFontMult((prev) => prev - 0.06);
+            setFontMult((prev) => prev - 0.05);
         } else {
             setSizeOk(true);
             return;
         }
 
-        timeout = setTimeout(() => resize(), 10);
+        timeout = setTimeout(() => resize(), 15);
     }, []);
 
     useEffect(() => {
-        if (!sizeOk) resize();
-    }, [sizeOk, resize]);
+         resize();
+    }, []);
 
     return (
         <Container ref={containerRef} size={fontMult}>
@@ -49,6 +49,7 @@ const Container = styled.div<{ size: number }>`
     > span {
         opacity: 0;
         color: ${$color("black")};
+        text-align: center;
         font-size: ${({ size }) => 1 * size}vw;
         &.visible{
             opacity: 1;
