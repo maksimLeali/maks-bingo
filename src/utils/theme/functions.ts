@@ -1,6 +1,12 @@
 
 type Theme = { [key: string]: any }
 
+/**
+ * 
+ * @param val - unit by which the container or margin or padding will be set. 
+ *              in this case the screen is divideb by 48  
+ * @returns 
+ */
 const uw = (val: number) => `calc(1vw * 100 / 48 * ${val})`
 
 export const $uw = (val: number) => ({ }) => uw(val);

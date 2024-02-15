@@ -1,0 +1,28 @@
+export const quotes =[
+    {  id: 12345, text: "Hello there" },
+    {  id: 23456, text: "How are you?" },
+    {  id: 34567, text: "I'm fine, thank you" },
+    {  id: 45678, text: "Nice weather today" },
+    {  id: 56789, text: "Have a great day!" },
+    {  id: 67890, text: "Hello there, how has your day been so far?" },
+    {  id: 78901, text: "I hope you're having a fantastic day filled with joy and laughter." },
+    {  id: 89012, text: "The weather outside is beautiful, perfect for a stroll in the park." },
+    {  id: 90123, text: "In every day, there are 1,440 minutes. opportunities to make a positive impact." },
+    {  id: 54321, text: "Life is short, so make the most out of every moment and cherish the memories you create." },
+    {  id: 43210, text: "Life is short." },
+    {  id: 65412, text: "Enjoy every moment." },
+    {  id: 76543, text: "Make the most out of today." },
+    {  id: 87654, text: "Cherish the little things." },
+    {  id: 95765, text: "Stay positive and keep smiling." },
+    {  id: 87652, text: "Every day is a new beginning." },
+    {  id: 98765, text: "Dream big and aim high." },
+    {  id: 10987, text: "Good things take time." },
+    {  id: 21098, text: "Believe in yourself." },
+    {  id: 32109, text: "You are capable of amazing things." },
+    {  id: 43410, text: "The best is yet to come." },
+    {  id: 94321, text: "Life is a journey, enjoy the ride." },
+    {  id: 65432, text: "Be kind to yourself and others." },
+    {  id: 78543, text: "Focus on progress, not perfection." },
+    {  id: 87634, text: "Keep moving forward." }
+
+]
