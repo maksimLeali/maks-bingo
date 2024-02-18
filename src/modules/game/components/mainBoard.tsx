@@ -1,13 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import { $uw, $color, $break_point } from "../../../utils";
-import { Tile } from "./Tile";
-import { quotes } from "../../../utils/quotes";
 import _ from 'lodash'
+
+import { $uw, $color, $break_point } from "../../../utils";
+import { Tile } from ".";
+import { quotes } from "../../../utils/quotes";
 
 export const MainBoard = React.memo(() => {
     return <Container >
-        {quotes.map((quote)=> <Tile key={quote.id}  text={quote.text}  />)}
+        {_.shuffle(quotes).map((quote)=> <Tile key={quote.id}  text={quote.text}  />)}
     </Container>
 })
 

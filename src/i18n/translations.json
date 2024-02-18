@@ -1,0 +1,13 @@
+{
+    "it":{
+        "game":{
+            "add_event": "Aggiungi eventi",
+            "remove": "Elimina"
+        }
+    },
+    "en": {
+        "game":{
+            "add_event": "Add event"
+        }
+    }
+}
