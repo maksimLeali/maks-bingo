@@ -1,6 +1,6 @@
 import React, { useCallback,  useEffect, useRef, useState } from "react";
 import styled from "styled-components";
-import { $break_point, $color, $cssTRBL } from "../../../utils";
+import { $break_point, $color, $cssTRBL, $uw } from "../../../utils";
 import { useAppContext } from "../../../contexts";
 
 export const Tile: React.FC<{ text: string }> = React.memo(({ text }) => {
@@ -48,17 +48,32 @@ const Container = styled.div<{ size: number, mode: 'dark' | 'light' }>`
     justify-content: center;
     align-items: center;
     padding: ${$cssTRBL(0.5)};
+    position: relative;
     &.clicked{
-
-        background-image: url("stroke_${({mode})=>mode}.png");
-        background-size:     contain;
-        background-repeat:   no-repeat;
-        background-position: center center; 
+        &:before{
+            content: "";
+            width:100%;
+            position: absolute;
+            height: 100%;
+            background-image: url("stroke_${({mode})=>mode}.png");
+            background-size:     contain;
+            background-repeat:   no-repeat;
+            background-position: center center; 
+            ${$break_point(480)}{
+                transform: translate(0, 2px) rotate(90deg);
+                height: ${$uw(10.8)};
+                width: ${$uw(10.8)};
+            }
+        }
     }
     > span {
         opacity: 0;
+        position: relative;
+        z-index: 1;
         color: ${$color("black")};
         text-align: center;
+        max-width: 100%;
+        overflow-wrap: break-word;
         font-size: ${({ size }) => 1 * size}vw;
         &.visible{
             opacity: 1;

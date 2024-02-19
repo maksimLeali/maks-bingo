@@ -3,7 +3,7 @@ export const quotes =[
     {  id: "23456", text: "How are you?" },
     {  id: "34567", text: "I'm fine, thank you" },
     {  id: "45678", text: "Nice weather today" },
-    {  id: "56789", text: "Have a great day!" },
+    {  id: "56789", text: "Piccolo bastardo" },
     {  id: "67890", text: "Hello there, how has your day been so far?" },
     {  id: "78901", text: "I hope you're having a fantastic day filled with joy and laughter." },
     {  id: "89012", text: "The weather outside is beautiful, perfect for a stroll in the park." },

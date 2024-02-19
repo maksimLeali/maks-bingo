@@ -19,7 +19,7 @@ body {
   display: flex;
   box-sizing: border-box;
   width: 100vw;
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 #root{
   width: 100%;
@@ -29,4 +29,34 @@ body {
   background-image:
     linear-gradient(to right, #8883 1px, transparent 1px),
     linear-gradient(to bottom, #8883 1px, transparent 1px);
+}
+
+body * {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f5f5f500;
+
+}
+
+/* For WebKit (Chrome, Safari, Edge) */
+body *::-webkit-scrollbar {
+  width: 8px;
+}
+
+body *::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
+
+body *::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+/* For Internet Explorer */
+body * {
+  -ms-overflow-style: auto; /* 'auto' or 'scrollbar' */
+}
+
+/* For Edge */
+body * {
+  -ms-overflow-style: scrollbar;
 }

@@ -1,7 +1,8 @@
 {
     "it":{
         "game":{
-            "add_event": "Aggiungi eventi",
+            "add_event": "Aggiungi evento",
+            "save_event": "Salva e aggiungi",
             "remove": "Elimina"
         }
     },

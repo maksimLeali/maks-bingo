@@ -37,7 +37,7 @@ const Container = styled.div`
         width : ${$uw(44)};
         > *{
             width: ${$uw(8.8)};
-            height:${$uw(8.8)};
+            height:${$uw(10.8)};
         }
     }
     
